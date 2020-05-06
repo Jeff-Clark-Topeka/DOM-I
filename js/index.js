@@ -117,4 +117,18 @@ const footer = document.getElementsByTagName('p').item(8);
 footer.textContent = (siteContent['footer']['copyright'])
 
 const navStyle = document.querySelectorAll('a');
-navStyle.style.color = 'green'
+navStyle.forEach(element => {
+  element.style.color = 'green'
+})
+
+const homeNav = document.createElement('a');
+homeNav.textContent = 'Home'
+
+const homeParent = document.querySelector('nav');
+homeParent.prepend(homeNav)
+
+const storeNav = document.createElement('a');
+storeNav.textContent = 'Store'
+
+const storeParent = document.querySelector('nav');
+storeParent.append(storeNav)
